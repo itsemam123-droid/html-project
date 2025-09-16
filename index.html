@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top navbar (mobile) -->
+  <div class="topnav">
+    <div class="logo">
+      <h2>Md Emam Uddin</h2>
+    </div>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="menu-icon">
+      <i class="fa fa-bars"></i>
+    </div>
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Sidebar + Hero -->
+  <div class="header" id="home">
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="profile">
+          <img src="WhatsApp Image 2025-09-16 at 12.27.56_e81cad92.jpg" alt="profile" width="200" height="200">
+          <h2>Md Emam Uddin</h2>
+        </div>
+        <ul class="nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h4>Welcome</h4>
+        <h1>I'm <span class="input">Md Emam Uddin</span></h1>
+        <h4>Based in Patiya, Chittagong.</h4>
+        <a href="#contact" class="btn">Hire Me</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am Md Emam Uddin, I am s student of CSE department in IIUC.
+      I enjoy creating responsive and user-friendly websites. My goals are to build impactful digital solutions 
+      and grow as a professional developer.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Tour Management System</h3>
+        <p>A database-driven system built using Java and MySQL to manage tours efficiently.</p>
+      </div>
+      <div class="project">
+        <h3>Calculator App</h3>
+        <p>A stylish and functional calculator created with Java Swing in NetBeans.</p>
+      </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>This very portfolio website built using HTML & CSS with responsive design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>Java & MySQL</li>
+      <li>Responsive Web Design</li>
+      <li>Problem Solving</li>
+      <li>Teamwork & Communication</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:emam@example.com">itsemam123@gmail.com</a></p>
+    <p>Phone: +880 1883284109</p>
+    <p>Social: <a href="#">Facebook</a> | <a href="#">LinkedIn</a></p>
+
+    <form>
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Md Emam Uddin. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Typing Effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+  <script>
+    var typed = new Typed(".input", {
+      strings: ["Md Emam Uddin", "Web Developer"],
+      typeSpeed: 65,
+      backSpeed: 55,
+      loop: true
+    });
+
+    // mobile navbar toggle
+    let menuicon = document.querySelector(".menu-icon");
+    let navbar = document.querySelector(".navbar");
+    let icon = document.querySelector(".menu-icon i");
+
+    menuicon.addEventListener("click", function () {
+      navbar.classList.toggle("open");
+      if (icon.classList.contains("fa-bars")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    });
+  </script>
+</body>
+</html>
